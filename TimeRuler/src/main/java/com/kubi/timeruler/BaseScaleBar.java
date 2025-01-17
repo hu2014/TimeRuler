@@ -434,6 +434,7 @@ public class BaseScaleBar extends View implements ScaleGestureDetector.OnScaleGe
         mScaleRatio *= scaleFactor;
         mTickSpacing = mScaleInfo.unitValue * unitPixel;
         Log.d(TAG, mScaleRatio + "onScale:mTickSpacing " + mTickSpacing);
+        status = STATUS_NONE;
         invalidate();
         return unitPixel < maxUnitPixel || unitPixel > minUnitPixel;
     }
